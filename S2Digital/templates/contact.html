@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+
+<!-- =========================
+     CONTACT HERO
+========================= -->
+<section class="hero hero-small container">
+  <div class="hero-inner">
+    <h1>Contact S2Digital</h1>
+    <p class="lead">
+      Inquiries, project requests or partnerships — we respond to new messages within one business day.
+    </p>
+  </div>
+</section>
+
+<!-- =========================
+     CONTACT INTRO
+========================= -->
+<section class="section">
+  <div class="container">
+    <h2>Get in touch</h2>
+    <p class="section-intro">
+      Use the form below or email us directly. Provide a concise summary of your project, goals and timeline so we can respond effectively.
+    </p>
+  </div>
+</section>
+
+<!-- =========================
+     CONTACT FORM
+========================= -->
+<section class="container">
+  <h2>Contact Us</h2>
+  <p>Use the form below or email us directly. We aim to respond within one business day.</p>
+
+  <div class="contact-form">
+    <form id="contactForm" autocomplete="on" novalidate>
+      <label>
+        Full name
+        <input type="text" name="name" required placeholder="Your name" maxlength="120" />
+      </label>
+
+      <label>
+        Email address
+        <input type="email" name="email" required placeholder="you@example.com" maxlength="200" />
+      </label>
+
+      <div class="form-row">
+        <label class="col">
+          Mobile (optional)
+          <input type="tel" name="mobile" placeholder="+91 555 555 5555" maxlength="40" />
+        </label>
+
+        </div>
+
+      <label>
+        Message
+        <textarea name="message" required placeholder="Brief description: goals, constraints, timeline" maxlength="2000"></textarea>
+      </label>
+
+      <div class="form-actions">
+        <button type="submit">Send Message</button>
+        <div id="contactResult" class="form-status" aria-live="polite"></div>
+      </div>
+    </form>
+  </div>
+
+  <hr/>
+
+  <div class="grid grid-3" style="margin-top:18px;">
+    <div class="feature">
+      <div class="feature-head">
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h4>Email</h4>
+      </div>
+      <p><a href="mailto:{{ site.CONTACT_EMAIL or 'contact@S2Digital.com' }}">{{ site.CONTACT_EMAIL or 'contact@S2Digital.com' }}</a></p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-head">
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1118 0z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="10" r="2" fill="currentColor"/>
+        </svg>
+        <h4>Location</h4>
+      </div>
+      <p>India — serving clients globally</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-head">
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <path d="M12 7v6l4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h4>Hours</h4>
+      </div>
+      <p>Monday–Friday, 9:00 AM–6:00 PM IST</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     TRUST MESSAGE
+========================= -->
+<section class="container" style="margin-top:26px">
+  <div class="feature-head">
+    <!-- What to expect icon -->
+    <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2l7 4v5c0 5-3.58 9.74-7 11-3.42-1.26-7-6-7-11V6l7-4z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    </svg>
+    <h2>What to expect</h2>
+  </div>
+
+  <div class="grid grid-3" style="margin-top:12px;">
+    <div class="feature">
+      <div class="feature-head">
+        <!-- Initial Review (magnifier) -->
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+        <h4>Initial Review</h4>
+      </div>
+      <p>We review your details and follow up with clarifying questions to scope the work effectively.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-head">
+        <!-- Proposal (document) -->
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 2v6h6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 13h8M8 17h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <h4>Proposal</h4>
+      </div>
+      <p>We provide a concise proposal outlining scope, approach and estimated timeline.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-head">
+        <!-- Next steps (rocket/arrow) -->
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 20l14-14" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 7l3 3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="19" r="1.5" fill="currentColor"/>
+        </svg>
+        <h4>Next steps</h4>
+      </div>
+      <p>We typically start with a short discovery or pilot to reduce risk and validate the approach.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+<section class="section section-dark container" style="margin-top:26px;">
+  <h3>Ready to begin?</h3>
+  <p>Share a short summary and we’ll propose the most pragmatic next step.</p>
+  <p><a class="btn-primary" href="{{ url_for('main.contact') }}">Send a message</a></p>
+</section>
+
+{% endblock %}

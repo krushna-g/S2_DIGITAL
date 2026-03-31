@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Services{% endblock %}
+{% block content %}
+<section class="container">
+  <h1>Services</h1>
+  <p class="lead">End-to-end delivery from discovery and prototyping to secure production and ongoing support.</p>
+
+  <section>
+    <h2>Core Services</h2>
+    <div class="grid grid-3">
+      <div class="feature">
+        <div class="feature-head">
+          <!-- Discovery & Architecture icon -->
+          <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" fill="none"/>
+            <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <h4>Discovery & Architecture</h4>
+        </div>
+        <p>Rapid discovery workshops, risk assessment and a practical architecture aligned to your business objectives.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <!-- Product Engineering icon -->
+          <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          </svg>
+          <h4>Product Engineering</h4>
+        </div>
+        <p>APIs, web applications and integrations built with secure defaults and maintainable codebases.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <!-- Design & Research icon -->
+          <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 21l3-3 8.5-8.5a2.5 2.5 0 013.5 0L21 9" stroke="currentColor" stroke-width="1.6" fill="none"/>
+            <path d="M14 6l4 4" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          </svg>
+          <h4>Design & Research</h4>
+        </div>
+        <p>User research, wireframes and tested interfaces to reduce friction and improve conversion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Operations & Support</h2>
+    <p>CI/CD, monitoring, runbooks and incident playbooks — we help teams run production systems with confidence.</p>
+  </section>
+
+  <section class="container cta">
+    <h3>Engage with confidence</h3>
+    <p>Our engagements are scoped to deliver measurable outcomes with clear acceptance criteria.</p>
+    <p><a class="btn-primary" href="{{ url_for('main.contact') }}">Request a consultation</a></p>
+  </section>
+</section>
+{% endblock %}

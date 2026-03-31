@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Products{% endblock %}
+{% block content %}
+<section class="container">
+  <h1>Products</h1>
+  <p class="lead">Practical, production-ready software components you can adopt quickly and operate with confidence.</p>
+
+  <section class="product-list">
+    <article class="product">
+      <div class="feature-head">
+        <!-- Customer Portal icon -->
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 7a4 4 0 014-4h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+          <path d="M8 11h8M8 15h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h3>Customer Portal</h3>
+      </div>
+      <p>Secure client-facing portal with role-based access, audit logging and support workflows. Built for privacy and scale.</p>
+      <p class="muted">Ideal for service providers and B2B platforms.</p>
+    </article>
+
+    <article class="product">
+      <div class="feature-head">
+        <!-- Data Sync Engine icon -->
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12h6l3-3v6l3-3h6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="6" r="1.5" fill="currentColor"/>
+          <circle cx="18" cy="18" r="1.5" fill="currentColor"/>
+        </svg>
+        <h3>Data Sync Engine</h3>
+      </div>
+      <p>Reliable connectors for synchronising data between systems with retries, deduplication and operational metrics.</p>
+      <p class="muted">Designed for integration projects and legacy migration work.</p>
+    </article>
+
+    <article class="product">
+      <div class="feature-head">
+        <!-- Admin & Reporting icon -->
+        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 7h18M7 21V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <rect x="9" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        </svg>
+        <h3>Admin & Reporting</h3>
+      </div>
+      <p>Admin consoles and reporting tools that give teams visibility and safe control over production data.</p>
+      <p class="muted">Focus on clarity, permissioning and traceability.</p>
+    </article>
+  </section>
+
+  <section class="container cta">
+    <h3>Need a custom product?</h3>
+    <p>We can adapt or extend any of these products to meet your specific requirements. Contact us to discuss integration and licensing.</p>
+    <p><a class="btn-primary" href="{{ url_for('main.contact') }}">Contact Sales</a></p>
+  </section>
+</section>
+{% endblock %}
